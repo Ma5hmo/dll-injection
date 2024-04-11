@@ -1,5 +1,6 @@
 #include "pch.h"
 
+#define PROCESS_TO_INJECT L"notepad.exe"
 #define DLL_NAME "mydll.dll"
 #define KERNEL32_DLL_PATH "C:\\Windows\\system32\\kernel32.dll"
 
@@ -43,7 +44,7 @@ int main()
 	DWORD pid = 0;
 	do
 	{
-		pid = GetProcessIdByName(L"notepad.exe");
+		pid = GetProcessIdByName(PROCESS_TO_INJECT);
 	} while (pid == 0); // until notepad.exe gets opened
 	printf("found! PID=%d\n", pid);
 
