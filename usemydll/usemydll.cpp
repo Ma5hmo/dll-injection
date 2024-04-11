@@ -45,7 +45,7 @@ int main()
 	do
 	{
 		pid = GetProcessIdByName(PROCESS_TO_INJECT);
-	} while (pid == 0); // until notepad.exe gets opened
+	} while (pid == 0); // until the process gets opened
 	printf("found! PID=%d\n", pid);
 
 	HANDLE proc = OpenProcess(PROCESS_ALL_ACCESS, FALSE, pid);

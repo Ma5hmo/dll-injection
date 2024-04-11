@@ -7,6 +7,5 @@
 
 extern "C"
 {
-	DECLDIR void Share();
-	void Keep();
+	void ShowMessage();
 }
